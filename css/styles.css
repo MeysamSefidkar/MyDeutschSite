@@ -150,6 +150,11 @@ p {
   }
 }
 
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
 .underline {
   width: 5rem;
   height: 0.25rem;
@@ -157,6 +162,10 @@ p {
   margin-bottom: 1.25rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.bg-grey {
+  background: var(--clr-grey-3);
 }
 
 /*
@@ -424,5 +433,57 @@ About
 
   .about-info {
     align-self: center;
+  }
+}
+
+/*
+=============== 
+Services
+===============
+*/
+
+.service {
+  background: var(--clr-white);
+  padding: 3rem 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: var(--transition);
+}
+
+.service .underline {
+  height: 0.12rem;
+  width: 3rem;
+  transition: var(--transition);
+}
+
+.service:hover {
+  background: var(--clr-primary-2);
+  color: var(--clr-white);
+}
+
+.service p {
+  transition: var(--transition);
+}
+
+.service:hover p {
+  color: var(--clr-white);
+}
+
+.service:hover .underline {
+  background: var(--clr-white);
+}
+
+@media screen and (min-width: 676px) {
+  .services-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .services-center {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
