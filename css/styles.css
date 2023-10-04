@@ -134,6 +134,10 @@ p {
   background: var(--clr-primary-3);
 }
 
+.section {
+  padding: 5rem 0;
+}
+
 .section-center {
   width: 90vw;
   margin: 0 auto;
@@ -170,6 +174,7 @@ Navbar
   height: 4.5rem;
   padding: 1rem;
   transition: var(--transition);
+  z-index: 3;
 }
 
 .nav-center {
@@ -313,6 +318,7 @@ Sidebar
 Hero
 ===============
 */
+
 .hero {
   background: var(--clr-primary-5);
 }
@@ -363,7 +369,8 @@ Hero
     position: relative;
   }
 
-  .hero-img::before {
+  .hero-img::before,
+  .about-img::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -372,5 +379,50 @@ Hero
     border-radius: var(--radius);
     top: 2rem;
     left: -2rem;
+  }
+}
+
+/*
+=============== 
+About
+===============
+*/
+
+.about-center {
+  display: grid;
+  gap: 3rem;
+}
+
+.about-photo {
+  max-width: 25rem;
+  max-height: 30rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+  position: relative;
+}
+
+.about-img {
+  justify-self: center;
+}
+
+.about-title {
+  margin-bottom: 2rem;
+}
+
+.about-title .underline {
+  margin-left: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .about-center {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-img {
+    position: relative;
+  }
+
+  .about-info {
+    align-self: center;
   }
 }
