@@ -2,6 +2,7 @@ const navbar = document.querySelector("#nav");
 const navBtn = document.querySelector("#nav-btn");
 const closeBtn = document.querySelector("#close-btn");
 const sidebar = document.querySelector("#sidebar");
+const date = document.querySelector("#date");
 
 // Add fixed class to navbar
 
@@ -22,3 +23,7 @@ navBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   sidebar.classList.remove("show-sidebar");
 });
+
+// Set date
+
+date.innerHTML = new Date().getFullYear();
