@@ -816,3 +816,85 @@ Timeline
 .timeline-item:nth-child(odd) .number {
   left: 0;
 }
+
+/*
+=============== 
+Articles
+===============
+*/
+
+.blog {
+  background: var(--clr-grey-3);
+}
+
+.card {
+  height: 27rem;
+  perspective: 1500px;
+  position: relative;
+}
+
+.card-side {
+  position: absolute;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1.5s linear;
+  border-radius: var(--radius);
+}
+
+.card-front {
+  background: var(--clr-white);
+}
+
+.card-back {
+  background: var(--clr-primary-5);
+  transform: rotateY(180deg);
+  display: grid;
+  place-items: center;
+}
+
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0);
+}
+
+.card-front img {
+  height: 13rem;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.card-footer img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.card-info {
+  padding: 1rem 1.5rem;
+}
+
+.card-footer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.card-footer p {
+  margin-bottom: 0;
+  justify-self: end;
+  color: var(--clr-primary-2);
+  font-size: 0.85rem;
+}
+
+.blog-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 3rem 1rem;
+}
